@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --secondary-gradient: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+body {
+  background: var(--primary-gradient);
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Converter card */
+.converter-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.converter-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Upload box */
+.drop-zone {
+  border: 2px dashed #aaa;
+  border-radius: 1rem;
+  padding: 25px;
+  text-align: center;
+  background: rgba(230, 230, 250, 0.4);
+  transition: background 0.3s ease;
+}
+.drop-zone.dragover {
+  background: rgba(103, 58, 183, 0.15);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #5a67d8, #6b46c1);
+  transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar-custom {
+  background: var(--secondary-gradient);
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal slider */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #a78bfa40;
+}
